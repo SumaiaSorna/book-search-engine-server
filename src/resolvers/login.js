@@ -5,14 +5,14 @@ const { signToken } = require("../utils/auth");
 
 const login = async (_, { input }, context) => {
   try {
-    const user = await User.findOne({ email: input.email });
+    const userFromDb = await User.findOne({ email: input.email });
 
-    if (!user) {
+    if (!userFromDb) {
       console.log("[ERROR]: Failed to login | User does not exist");
       throw new AuthenticationError("Failed to login");
     }
 
-    const isValidPassword = await user.checkPassword(input.password);
+    const isValidPassword = await userFromDb.checkPassword(input.password);
 
     if (!isValidPassword) {
       console.log("[ERROR]: Failed to login | Incorrect password");
@@ -20,7 +20,7 @@ const login = async (_, { input }, context) => {
     }
 
     return {
-      token: signToken(user),
+      token: signToken(userFromDb),
       user: userFromDb,
     };
   } catch (error) {
