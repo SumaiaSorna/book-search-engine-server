@@ -2,12 +2,12 @@ const { AuthenticationError, ApolloError } = require("apollo-server");
 
 const { User } = require("../models");
 
-const saveBook = async (_, { book }, context, info) => {
+const saveBook = async (_, { book }, context) => {
   //* accepts a book author's array, description, title, bookId, image, and link as parameters; returns a User type
 
   try {
     if (!context.user) {
-      throw new AuthenticationError("You must be logged in to add a book.");
+      throw new AuthenticationError("You are logged in to add a book.");
     }
 
     const updatedUser = await User.findOneAndUpdate(
