@@ -5,7 +5,7 @@ const removeBook = async (_, { bookId }, context) => {
   //* accepts a book's bookId as a parameter; returns a User type
   try {
     if (!context.user) {
-      throw new AuthenticationError("You must be logged in to delete a book.");
+      throw new AuthenticationError("You are logged in to delete a book.");
     }
 
     const updatedUser = await User.findByIdAndUpdate(
