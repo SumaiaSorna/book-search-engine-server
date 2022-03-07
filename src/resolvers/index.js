@@ -5,9 +5,7 @@ const saveBook = require("./saveBook");
 const removeBook = require("./removeBook");
 
 const resolvers = {
-  Query: {
-    me,
-  },
+  Query: { me },
   Mutation: { login, addUser, saveBook, removeBook },
 };
 
