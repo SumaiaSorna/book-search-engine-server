@@ -1,18 +1,19 @@
 const { ApolloError } = require("apollo-server");
+
 const { User } = require("../models");
 const { signToken } = require("../utils/auth");
 
-const addUser = async (_, { user }) => {
+const addUser = async (_, { input }, context) => {
   try {
-    const newUser = await User.create(user);
+    const user = await User.create(input);
 
     return {
-      token: signToken(newUser),
-      user: newUser,
+      token: signToken(user),
+      user,
     };
   } catch (error) {
-    console.log(`[Error]: Failed to add user | ${error.message}`);
-    throw new ApolloError("Failed to add User");
+    console.log(`[ERROR]: Failed to add user | ${error.message}`);
+    throw new ApolloError("Failed to add user");
   }
 };
 
