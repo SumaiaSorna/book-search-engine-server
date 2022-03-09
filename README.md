@@ -8,10 +8,6 @@ Click [here](#) to view deployed application on Heroku.
 
 Click [here](#) to view Code on Github.
 
-## Description
-
-The app is built with a React front end, MongoDB database, and an Apollo server with GraphQL queries and mutations.
-
 ## Table Of Contents
 
 - [Deployed URL](#deployed-url)
@@ -24,6 +20,10 @@ The app is built with a React front end, MongoDB database, and an Apollo server 
   - [Database Configuration](#database-configuration)
 - [Screenshots](#screenshots)
 - [Questions](#questions)
+
+## Description
+
+The app is built with a React front end, MongoDB database, and an Apollo server with GraphQL queries and mutations.
 
 ## Getting Started
 
