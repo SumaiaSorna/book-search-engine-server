@@ -2,11 +2,11 @@
 
 ## Deployed URL
 
-Click [here](#) to view deployed application on Heroku.
+Click [here](https://secure-coast-73388.herokuapp.com/) to view deployed application on Heroku.
 
 ## Repository Link
 
-Click [here](#) to view Code on Github.
+Click [here](https://github.com/SumaiaSorna/book-search-engine-server/tree/dev) to view Code on Github.
 
 ## Table Of Contents
 
