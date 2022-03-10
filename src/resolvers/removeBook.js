@@ -6,7 +6,7 @@ const removeBook = async (_, { input }, context) => {
   try {
     if (context.user) {
       const user = await User.findOneAndUpdate(
-        { _id: context.user._id },
+        { _id: context.user.id },
         { $pull: { savedBooks: { bookId: input.bookId } } },
         { new: true }
       );
