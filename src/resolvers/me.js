@@ -6,7 +6,6 @@ const me = async (_, __, context) => {
   try {
     if (context.user) {
       const user = await User.findById(context.user.id);
-      console.log(user);
 
       if (!user) {
         console.log(`[ERROR]: Failed to get user | User does not exist`);
