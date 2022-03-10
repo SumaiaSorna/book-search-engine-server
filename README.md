@@ -71,11 +71,9 @@ SECRET=
 
 ## Screenshots
 
-![Final look of my Portfolio-about-me](./src/assets/screenshots/#)
+![Google-Book-Search-books](./public/assets/screenshots/Google-Book-Search-books.png)
 
-![Final look of my Portfolio-projects](./src/assets/screenshots/#)
-
-![Final look of my Portfolio-contact-me](./src/assets/screenshots/#)
+![Google-Book-Search-saved-books](./public/assets/screenshots/Google-Book-Search-saved-books.png)
 
 ### Questions
 
